@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Login Form -->
+    <form class="form" id="loginForm" action="/login" method="POST">
+      <h2>Login</h2>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <div class="options">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button type="submit">Sign In</button>
+      <p>Don't have an account? <a id="showRegister">Sign Up</a></p>
+    </form>
+
+    <!-- Register Form -->
+    <form class="form hidden" id="registerForm" action="/register" method="POST">
+      <h2>Register</h2>
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+      <button type="submit">Register</button>
+      <p>Already have an account? <a id="showLogin">Login</a></p>
+    </form>
+
+    <script src="login.js"></script>
+  </div>
+</body>
+</html>
